@@ -66,22 +66,18 @@ function getTraceInfo() public view returns(TraceData[] memory _data)
 
 ## 银行合约(Bank)
 ### 变量
-```
-address bank_addr;                                  银行地址
-string public bank_name;                            银行名称
-string public bank_id;                              银行统一信用社会代码
-TableFactory tf;                                    TF表格
-string constant t_name = "Transfer Records";        表名
-struct List                                         流水结构体
-{
-  address Sender;                                   转账人
-  address Receiver;                                 收款人
-  int money;                                        金额
-  uint Timestamp;                                   转账时间
-  string TransferID;                                转账流水号
-  string remark;                                    备注
-}
-```
+- ``address bank_addr``银行地址
+- ``string public bank_name``银行名称
+- ``string public bank_id``银行统一信用社会代码
+- ``TableFactory tf``TF表格
+- ``string constant t_name = "Transfer Records"``表名
+- ``struct List``流水结构体
+    - ``address Sender``转账人
+    - ``address Receiver``收款人
+    - ``int money``金额
+    - ``uint Timestamp``转账时间
+    - ``string TransferID``转账流水号
+    - ``string remark``备注
 ### 初始化
 ``
 constructor(string name, string id) public
