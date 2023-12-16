@@ -1,31 +1,27 @@
 # Wetender合约接口说明文档
 ## 合约说明
-### 辅助功能合约
-- Project 项目进度合约
-- Table 表合约
-- Government 政府合约
 ### 部门及管理合约
 - Bank 银行合约
 - Enterprise 企业合约
 - Town_Gov 乡政府合约
 - County_Gov 县政府合约
+### 辅助功能合约
+- Project 项目进度合约
+- Table 表合约
+- Government 政府合约
 
-
-## 项目进度合约（Project)
+## 项目进度合约(Project)
 ### 变量
-```
-Struct Tracedata                         追踪表结构体
-{
-  uint public ProjectId;                 项目编号
-  string public ProjectName;             项目名称
-  uint public _status;                   项目状态 状态代号：0.已立项; 1.已招标; 2.正在施工; 3.已竣工; 4.已验收; 5.已投入使用; 6.售后修缮;
-}
-uint public bal;                         项目预算
-uint used_money;                         当前使用总预算  
-TraceData[] public traceData;            追踪表   
-address public owner;                    项目归属方
-address public builder;                  项目承包方            
-```
+- ``Struct Tracedata``追踪表结构体
+ - ``uint public ProjectId``项目编号
+ - ``string public ProjectName``项目名称
+ - ``uint public _status``项目状态 状态代号：0.已立项; 1.已招标; 2.正在施工; 3.已竣工; 4.已验收; 5.已投入使用; 6.售后修缮;
+- ``uint public bal``项目预算
+- ``uint used_money``当前使用总预算  
+- ``TraceData[] public traceData``追踪表   
+- ``address public owner``项目归属方
+- ``address public builder``项目承包方
+
 ### 初始化
 ```
 constructor(uint id, string name, uint balance) public
@@ -68,7 +64,7 @@ function getPrice() public view returns(uint)
 function getTraceInfo() public view returns(TraceData[] memory _data)
  ```
 
-## 银行合约（Bank)
+## 银行合约(Bank)
 ### 变量
 ```
 address bank_addr;                                  银行地址
@@ -90,7 +86,7 @@ struct List                                         流水结构体
 ``
 constructor(string name, string id) public
 ``
-## 县级政府合约（County_Gov）
+## 县级政府合约(County_Gov)
 ### 变量
 ```
 struct Towns{address town,bool valid} 乡级政府列表，valid用于检验乡镇
