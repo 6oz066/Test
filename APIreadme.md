@@ -11,8 +11,6 @@
 - County_Gov 县政府合约
 
 
-
-
 ## 项目进度合约（Project)
 ### 变量
 ```
@@ -70,7 +68,24 @@ function getPrice() public view returns(uint)
 function getTraceInfo() public view returns(TraceData[] memory _data)
  ```
 
-
+## 银行合约（Bank)
+### 变量
+```
+address bank_addr;
+string public bank_name;
+string public bank_id;
+TableFactory tf;
+string constant t_name = "Transfer Records";
+struct List
+{
+ - address Sender;
+ - address Receiver;
+ - int money;
+ - uint Timestamp;
+ - string TransferID;
+ - string remark;
+}
+```
 ## 县级政府合约（County_Gov）
 ### 变量
 ```
