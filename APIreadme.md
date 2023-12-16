@@ -27,27 +27,27 @@
 constructor(uint id, string name, uint balance) public
 ```
 ### 功能函数
-1.项目开标（只有所有者可以操作）
+1.项目开标函数
 ```
 function Deal(address target, string remark) external onlyOwner()
 ```
-2.正在施工（只有中标者可以操作）
+2.设置施工状态函数
 ```
 function Build(uint money, string remark) external onlyBuilder()
 ```
-3.已竣工（只有中标者可以操作）
+3.设置竣工状态函数
 ```
 function Finish(string remark) external onlyBuilder()
 ```
-4.已验收（只有所有者可以操作） 备注：money用于第三方检测验收的预算
+4.项目验收函数 备注：money用于第三方检测验收的预算
 ```
 function Pass(uint money, string remark) external onlyOwner()
 ```
-5.投入使用（只有所有者可以操作）
+5.项目投入使用函数
 ```
 function Work(string remark) external onlyOwner()
 ```
-6.售后修缮（只有所有者可以操作）
+6.售后修缮函数
 ```
 function AfterMarket(uint money, string remark) external onlyOwner()
 ```
@@ -75,15 +75,15 @@ function getTraceInfo() public view returns(TraceData[] memory _data)
 ### 初始化
 ``constructor(string id, string name) public``
 ### 功能函数
-1.开标同步
+1.同步开标函数
 ```
 function AddProj(int ProjectID, address ProjectAddr, string remark) external
 ```
-2.施工
+2.设置施工函数
 ```
 function Build(int ProjectID, int money, string remark) public onlyOwner()
 ```
-3.竣工
+3.设置竣工函数
 ```
 function Finish(int ProjectID, string remark) public onlyOwner()
 ```
@@ -108,7 +108,22 @@ function Finish(int ProjectID, string remark) public onlyOwner()
 constructor(string name, string id) public
 ``
 ### 功能函数
-
+1.建表函数
+```
+function createTable() private
+```
+2.开启表格函数
+```
+function openTable() private returns(Table)
+```
+3.表格添加数据函数
+```
+function insert(uint ProjectID, address Sender, address Receiver, int money, uint Timestamp, string TransferID, string remark)
+```
+4.查询函数
+```
+function select(uint ProjectID) public view returns (uint, List[] memory)
+```
 
 ## 县级政府合约(County_Gov)
 ### 变量
@@ -120,15 +135,15 @@ constructor(string name, string id) public
 constructor(string name) public Government(name){}
 ```
 ### 功能函数
-1.添加乡级政府
+1.添加乡级政府函数
 ```
 function addTown(string name, address town) public onlyOwner() 
 ```
-2.删除乡级政府
+2.删除乡级政府函数
 ```
 function removeTown(string name) public onlyOwner()  
 ```
-3.查询乡级政府是否存在
+3.查询乡级政府是否存在函数
 ```
 function checkTown(string name) public view returns(string, address)
 ```
