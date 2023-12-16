@@ -1,6 +1,14 @@
 # Wetender合约接口说明文档
 ## 合约说明
-
+### 辅助功能合约
+- Project 项目进度合约
+- Table 表合约
+- Government 政府合约
+### 部门及管理合约
+- Bank 银行合约
+- Enterprise 企业合约
+- Town_Gov 乡政府合约
+- County_Gov 县政府合约
 
 ## 项目进度合约（Project)
 ### 变量
