@@ -212,7 +212,7 @@ function checkTown(string name) public view returns(string, address)
 ```
 
 ## 乡级政府合约(Town_Gov)
-乡级政府合约从政府合约(Government)派生而成，请参考Government合约。
+县乡政府的合约统一通过Government合约派生而来。
 
 
 
