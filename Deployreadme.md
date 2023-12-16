@@ -6,7 +6,7 @@
 - 当配置”yes”时，需配置已有链的路径fisco.dir。路径下要存在sdk目录，sdk目录中包含ca.crt, sdk.crt, sdk.key及gm目录，gm目录中包含国密SSL所需证书，包含gmca.crt、gmsdk.crt、gmsdk.key、gmensdk.crt和gmensdk.key
 - 当配置”no”时，需配置节点fisco版本和节点安装个数，搭建的新链默认两个群组，建议搭建至少四个群组。
 如果不使用一键部署搭建新链，可以参考FISCO BCOS官方文档搭建 FISCO BCOS部署流程。  
-**注意：本作品建议使用国密版部署，故需要修改设置配置项encrypt.type=1，并修改设置配置项encrypt.sslType=1来使用使用国密SSL。**
+**注意：本作品建议使用国密版部署，故需要修改设置配置项``encrypt.type=1``，并修改设置配置项``encrypt.sslType=1``来使用使用国密SSL。**
 ## 访问
 一键部署完成后，打开浏览器（Chrome Safari或Firefox），即可访问WeBase平台。（默认端口为5000）  
 ``http://{deployIP}:{webPort}``  
