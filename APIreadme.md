@@ -64,6 +64,31 @@ function getPrice() public view returns(uint)
 function getTraceInfo() public view returns(TraceData[] memory _data)
  ```
 
+
+## 企业合约(Enterprise)
+### 变量
+- ``address etp_addr``企业地址
+- ``string public etp_id``企业编号
+- ``string public etp_name``企业名称
+- ``int public num``企业项目数量
+- ``mapping(int => address) public proj``企业项目列表
+### 初始化
+``constructor(string id, string name) public``
+### 功能函数
+1.开标同步
+```
+function AddProj(int ProjectID, address ProjectAddr, string remark) external
+```
+2.施工
+```
+function Build(int ProjectID, int money, string remark) public onlyOwner()
+```
+3.竣工
+```
+function Finish(int ProjectID, string remark) public onlyOwner()
+```
+
+
 ## 银行合约(Bank)
 ### 变量
 - ``address bank_addr``银行地址
@@ -82,6 +107,9 @@ function getTraceInfo() public view returns(TraceData[] memory _data)
 ``
 constructor(string name, string id) public
 ``
+### 功能函数
+
+
 ## 县级政府合约(County_Gov)
 ### 变量
 - ``struct Towns``乡级政府列表结构体
@@ -106,6 +134,7 @@ function checkTown(string name) public view returns(string, address)
 ```
 
 ## 乡级政府合约(Town_Gov)
-### 变量
-```
+此处乡级政府合约接口与政府合约(Government)相同，请参考Government合约。
+
+
 
