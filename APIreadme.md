@@ -65,6 +65,55 @@ function getTraceInfo() public view returns(TraceData[] memory _data)
  ```
 
 
+## 政府合约(Government)
+### 变量
+- ``address gov_addr``政府单位地址
+- ``string public gov_name``政府单位名称
+- ``int public bal``总预算
+- ``int public rev``剩余预算
+- ``int public num``项目数量
+- ``mapping(int => Project) public proj``项目列表
+
+### 初始化
+``constructor(string name) public``
+
+### 功能函数
+1.设置预算
+```
+function setBal(int _bal) public onlyOwner()
+```
+2.立项
+```
+function CreateProj(int ProjectID, string ProjectName, int money) public onlyOwner()
+```
+3.开标
+```
+function Deal(int ProjectID, address target, string remark) public onlyOwner()
+```
+4.通过验收
+```
+function Pass(int ProjectID, int money, string remark) public onlyOwner()
+```
+5.投入使用
+```
+function Work(int ProjectID, string remark) public onlyOwner()
+```
+6.售后修缮
+```
+function AfterMarket(int ProjectID, int money, string remark) public onlyOwner()
+```
+7.查询项目状态
+```
+function getStatus(int ProjectID) public view returns(int)
+```
+8.查询项目使用资金
+```
+function getPrice(int ProjectID) public view returns(int)
+```
+9.查询溯源记录
+```
+function getTraceInfo(int ProjectID) public view returns(Project.TraceData[] memory _data)
+```
 ## 企业合约(Enterprise)
 ### 变量
 - ``address etp_addr``企业地址
@@ -149,7 +198,7 @@ function checkTown(string name) public view returns(string, address)
 ```
 
 ## 乡级政府合约(Town_Gov)
-此处乡级政府合约接口与政府合约(Government)相同，请参考Government合约。
+乡级政府合约从政府合约(Government)派生而成，请参考Government合约。
 
 
 
