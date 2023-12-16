@@ -47,22 +47,26 @@ function Pass(uint money, string remark) external onlyOwner()
 ```
 function Work(string remark) external onlyOwner()
 ```
-6.售后修缮函数
+6.项目结算函数
+```
+function Salary(uint money, string remark) public onlyOwner() returns (bool)
+```
+7.售后修缮函数
 ```
 function AfterMarket(uint money, string remark) external onlyOwner()
 ```
-7.查询项目状态
+8.查询项目状态
 ```
 function getStatus() public view returns(uint)
 ```
-8.查询项目使用资金
+9.查询项目使用资金
 ```
 function getPrice() public view returns(uint)
 ```
-9.查询溯源记录
+10.查询溯源记录
 ```
 function getTraceInfo() public view returns(TraceData[] memory _data)
- ```
+```
 
 
 ## 政府合约(Government)
@@ -100,19 +104,23 @@ function Pass(int ProjectID, int money, string remark) public onlyOwner()
 ```
 function Work(int ProjectID, string remark) public onlyOwner()
 ```
-6.售后修缮函数
+6.项目结算
+```
+function Salary(uint ProjectID, uint money, string remark) public onlyOwner()
+```
+7.售后修缮函数
 ```
 function AfterMarket(int ProjectID, int money, string remark) public onlyOwner()
 ```
-7.查询项目状态
+8.查询项目状态
 ```
 function getStatus(int ProjectID) public view returns(int)
 ```
-8.查询项目使用资金
+9.查询项目使用资金
 ```
 function getPrice(int ProjectID) public view returns(int)
 ```
-9.查询溯源记录
+10.查询溯源记录
 ```
 function getTraceInfo(int ProjectID) public view returns(Project.TraceData[] memory _data)
 ```
@@ -140,8 +148,10 @@ function Build(int ProjectID, int money, string remark) public onlyOwner()
 ```
 function Finish(int ProjectID, string remark) public onlyOwner()
 ```
-
-
+4.项目成交同步函数
+```
+function AddProfit(uint ProjectID, uint money) external
+```
 ## 银行合约(Bank)
 ### 变量
 - ``address bank_addr``银行地址
