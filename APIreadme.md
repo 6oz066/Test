@@ -13,9 +13,9 @@
 ## 项目进度合约(Project)
 ### 变量
 - ``Struct Tracedata``追踪表结构体
- - ``uint public ProjectId``项目编号
- - ``string public ProjectName``项目名称
- - ``uint public _status``项目状态 状态代号：0.已立项; 1.已招标; 2.正在施工; 3.已竣工; 4.已验收; 5.已投入使用; 6.售后修缮;
+    - ``uint public ProjectId``项目编号
+    - ``string public ProjectName``项目名称
+    - ``uint public _status``项目状态 状态代号：0.已立项; 1.已招标; 2.正在施工; 3.已竣工; 4.已验收; 5.已投入使用; 6.售后修缮;
 - ``uint public bal``项目预算
 - ``uint used_money``当前使用总预算  
 - ``TraceData[] public traceData``追踪表   
