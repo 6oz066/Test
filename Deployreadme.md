@@ -8,15 +8,15 @@
 如果不使用一键部署搭建新链，可以参考FISCO BCOS官方文档搭建 FISCO BCOS部署流程。
 ** 注意：本作品建议使用国密版部署，故需要修改设置配置项encrypt.type=1，并修改设置配置项encrypt.sslType=1来使用使用国密SSL。**
 ## 访问
-一键部署完成后，打开浏览器（Chrome Safari或Firefox），即可访问WeBase平台。（默认端口为5000） 
-http://{deployIP}:{webPort} 
-示例：http://localhost:5000
+一键部署完成后，打开浏览器（Chrome Safari或Firefox），即可访问WeBase平台。（默认端口为5000）  
+http://{deployIP}:{webPort}  
+示例：http://localhost:5000  
 ## 部署流程
 将Contract文件夹当中的所有合约导入“合约IDE”中并保存。
-在“私钥管理”中创建至少两个用户。建议创建至少四个用户，分别为县级政府（County_Gov），乡级政府（Town_Gov），银行（WeBank），中标企业（Enterprise）。
-将County_Gov、Town_Gov、Bank、Enterprise的四个合约分别部署到County_Gov、Town_Gov、WeBank、Enterprise四个用户当中，输入指定参数即可。企业和银行用户的id，建议使用统一社会信用代码。
-* 县级政府可以通过使用addTown函数，将乡级政府的单位名称和用户地址导入到县级政府特有的乡级政府管理列表town_list中，方便后续管理。
-* 县乡政府的合约统一通过Government合约派生而来，故基本功能一致。
+在“私钥管理”中创建至少两个用户。建议创建至少四个用户，分别为县级政府（County_Gov），乡级政府（Town_Gov），银行（WeBank），中标企业（Enterprise）。  
+将County_Gov、Town_Gov、Bank、Enterprise的四个合约分别部署到County_Gov、Town_Gov、WeBank、Enterprise四个用户当中，输入指定参数即可。企业和银行用户的id，建议使用统一社会信用代码。  
+* 县级政府可以通过使用addTown函数，将乡级政府的单位名称和用户地址导入到县级政府特有的乡级政府管理列表town_list中，方便后续管理。  
+* 县乡政府的合约统一通过Government合约派生而来，故基本功能一致。  
 ## 交易环节
 
 
