@@ -1,7 +1,7 @@
 # 部署文件运行说明
 本作品采用WeBase一键部署，详见：WeBase技术文档链接https://webasedoc.readthedocs.io/zh-cn/latest/docs/WeBASE/install.html。
 ## 修改配置（重要）
-### 修改配置文件（vi common.properties）
+### 修改配置文件（``vi common.properties``）
 一键部署支持使用已有链或者搭建新链。通过参数”if.exist.fisco”配置是否使用已有链，以下配置二选一即可：
 - 当配置”yes”时，需配置已有链的路径fisco.dir。路径下要存在sdk目录，sdk目录中包含ca.crt, sdk.crt, sdk.key及gm目录，gm目录中包含国密SSL所需证书，包含gmca.crt、gmsdk.crt、gmsdk.key、gmensdk.crt和gmensdk.key
 - 当配置”no”时，需配置节点fisco版本和节点安装个数，搭建的新链默认两个群组，建议搭建至少四个群组。
