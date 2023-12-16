@@ -8,8 +8,8 @@
 如果不使用一键部署搭建新链，可以参考FISCO BCOS官方文档搭建 FISCO BCOS部署流程。
 ** 注意：本作品建议使用国密版部署，故需要修改设置配置项encrypt.type=1，并修改设置配置项encrypt.sslType=1来使用使用国密SSL。**
 ## 访问
-一键部署完成后，打开浏览器（Chrome Safari或Firefox），即可访问WeBase平台。（默认端口为5000）
-http://{deployIP}:{webPort}
+一键部署完成后，打开浏览器（Chrome Safari或Firefox），即可访问WeBase平台。（默认端口为5000）\n
+http://{deployIP}:{webPort} \n
 示例：http://localhost:5000
 ## 部署流程
 将Contract文件夹当中的所有合约导入“合约IDE”中并保存。
