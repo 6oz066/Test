@@ -34,18 +34,32 @@ function Build(uint money, string remark) external onlyBuilder()
 ```
 function Finish(string remark) external onlyBuilder()
 ```
-4.已验收（只有所有者可以操作） 备注：money用于第三方检测验收的预算```
-function Pass(uint money, string remark) external onlyOwner()```
-5.投入使用（只有所有者可以操作）```
-function Work(string remark) external onlyOwner()```
-6.售后修缮（只有所有者可以操作）```
-function AfterMarket(uint money, string remark) external onlyOwner()```
-7.查询项目状态```
-function getStatus() public view returns(uint)```
-8.查询项目使用资金```
-function getPrice() public view returns(uint)```
-9.查询溯源记录```
-function getTraceInfo() public view returns(TraceData[] memory _data) ```
+4.已验收（只有所有者可以操作） 备注：money用于第三方检测验收的预算
+```
+function Pass(uint money, string remark) external onlyOwner()
+```
+5.投入使用（只有所有者可以操作）
+```
+function Work(string remark) external onlyOwner()
+```
+6.售后修缮（只有所有者可以操作）
+```
+function AfterMarket(uint money, string remark) external onlyOwner()
+```
+7.查询项目状态
+```
+function getStatus() public view returns(uint)
+```
+8.查询项目使用资金
+```
+function getPrice() public view returns(uint)
+```
+9.查询溯源记录
+```
+function getTraceInfo() public view returns(TraceData[] memory _data)
+ ```
+
+
 ## 县级政府合约（County_Gov）
 ### 变量
 ```
