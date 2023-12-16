@@ -16,9 +16,9 @@
 ```
 Struct Tracedata                         追踪表结构体
 {
-uint public ProjectId;                   项目编号
-string public ProjectName;               项目名称
-uint public _status;                     项目状态 状态代号：0.已立项; 1.已招标; 2.正在施工; 3.已竣工; 4.已验收; 5.已投入使用; 6.售后修缮;
+  uint public ProjectId;                 项目编号
+  string public ProjectName;             项目名称
+  uint public _status;                   项目状态 状态代号：0.已立项; 1.已招标; 2.正在施工; 3.已竣工; 4.已验收; 5.已投入使用; 6.售后修缮;
 }
 uint public bal;                         项目预算
 uint used_money;                         当前使用总预算  
@@ -71,21 +71,25 @@ function getTraceInfo() public view returns(TraceData[] memory _data)
 ## 银行合约（Bank)
 ### 变量
 ```
-address bank_addr;
-string public bank_name;
-string public bank_id;
-TableFactory tf;
-string constant t_name = "Transfer Records";
-struct List
+address bank_addr;                                  银行地址
+string public bank_name;                            银行名称
+string public bank_id;                              银行统一信用社会代码
+TableFactory tf;                                    TF表格
+string constant t_name = "Transfer Records";        表名
+struct List                                         流水结构体
 {
- - address Sender;
- - address Receiver;
- - int money;
- - uint Timestamp;
- - string TransferID;
- - string remark;
+  address Sender;                                   转账人
+  address Receiver;                                 收款人
+  int money;                                        金额
+  uint Timestamp;                                   转账时间
+  string TransferID;                                转账流水号
+  string remark;                                    备注
 }
 ```
+### 初始化
+``
+constructor(string name, string id) public
+``
 ## 县级政府合约（County_Gov）
 ### 变量
 ```
