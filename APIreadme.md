@@ -80,27 +80,27 @@ constructor(string name) public
 ```
 
 ### 功能函数
-1.设置预算
+1.设置预算函数
 ```
 function setBal(int _bal) public onlyOwner()
 ```
-2.立项
+2.立项函数
 ```
 function CreateProj(int ProjectID, string ProjectName, int money) public onlyOwner()
 ```
-3.开标
+3.开标函数
 ```
 function Deal(int ProjectID, address target, string remark) public onlyOwner()
 ```
-4.通过验收
+4.验收函数
 ```
 function Pass(int ProjectID, int money, string remark) public onlyOwner()
 ```
-5.投入使用
+5.投入使用函数
 ```
 function Work(int ProjectID, string remark) public onlyOwner()
 ```
-6.售后修缮
+6.售后修缮函数
 ```
 function AfterMarket(int ProjectID, int money, string remark) public onlyOwner()
 ```
