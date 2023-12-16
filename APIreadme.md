@@ -75,7 +75,9 @@ function getTraceInfo() public view returns(TraceData[] memory _data)
 - ``mapping(int => Project) public proj``项目列表
 
 ### 初始化
-``constructor(string name) public``
+```
+constructor(string name) public
+```
 
 ### 功能函数
 1.设置预算
@@ -122,7 +124,9 @@ function getTraceInfo(int ProjectID) public view returns(Project.TraceData[] mem
 - ``int public num``企业项目数量
 - ``mapping(int => address) public proj``企业项目列表
 ### 初始化
-``constructor(string id, string name) public``
+```
+constructor(string id, string name) public
+```
 ### 功能函数
 1.同步开标函数
 ```
@@ -153,9 +157,9 @@ function Finish(int ProjectID, string remark) public onlyOwner()
     - ``string TransferID``转账流水号
     - ``string remark``备注
 ### 初始化
-``
+```
 constructor(string name, string id) public
-``
+```
 ### 功能函数
 1.建表函数
 ```
